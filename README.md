@@ -40,10 +40,10 @@ Target: Price
 
 #**⚙️How to Run**
 
-** Install dependencies**
+#** Install dependencies**
 pip install flask pandas numpy scikit-learn
 
-** Run the Flask app**
+#** Run the Flask app**
 python render.py
 
 Then open in browser:
