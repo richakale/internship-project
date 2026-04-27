@@ -45,20 +45,36 @@
         <p id="result"></p>
     </form>
     
-    <script>
-        function calculatePrice() {
-            var sqft = document.getElementById('uiSqft').value;
-            var bhk = document.querySelector('input[name="uiBHK"]:checked').value;
-            var location = document.getElementById('location').value;
-            var amenities = 0;
+<script>
+function calculatePrice() {
 
-            if (document.getElementById('parking').checked) amenities += parseInt(document.getElementById('parking').value);
-            if (document.getElementById('gym').checked) amenities += parseInt(document.getElementById('gym').value);
-            if (document.getElementById('pool').checked) amenities += parseInt(document.getElementById('pool').value);
+    let sqft = parseInt(document.getElementById('uiSqft').value);
+    let location = parseInt(document.getElementById('location').value);
 
-            var basePrice = (parseInt(sqft) * parseInt(location)) + (parseInt(bhk) * 5000) + amenities;
-            document.getElementById('result').innerHTML = 'Total Price: ₹' + basePrice;
-        }
-    </script>
+    let bhkElement = document.querySelector('input[name="uiBHK"]:checked');
+    let bhk = bhkElement ? parseInt(bhkElement.value) : 0;
+
+    if (isNaN(sqft) || sqft <= 0) {
+        document.getElementById('result').innerHTML = "Enter valid square feet";
+        return;
+    }
+
+    let amenities = 0;
+
+    if (document.getElementById('parking').checked)
+        amenities += parseInt(document.getElementById('parking').value);
+
+    if (document.getElementById('gym').checked)
+        amenities += parseInt(document.getElementById('gym').value);
+
+    if (document.getElementById('pool').checked)
+        amenities += parseInt(document.getElementById('pool').value);
+
+    let basePrice = (sqft * location) + (bhk * 5000) + amenities;
+
+    document.getElementById('result').innerHTML =
+        'Total Price: ₹ ' + basePrice;
+}
+</script>
 </body>
 </html>
