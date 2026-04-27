@@ -1,7 +1,8 @@
 # 🏡 Bengaluru House Price Prediction
 
 ## 🌐 Live Demo  
-👉 http://your-aws-link
+👉 https://internship-project-dt5v.onrender.com
+
 
 ---
 
