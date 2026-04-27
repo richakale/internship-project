@@ -21,6 +21,7 @@ Environment: Jupyter Notebook
 #**📂 Project Structure**
 
 internship-project/
+|
 ├── app.html              # Frontend UI
 ├── app.css               # Styling
 ├── app.js                # Frontend logic
@@ -32,11 +33,11 @@ internship-project/
 
 Bengaluru housing dataset
 Features include:
-Location
-Total area (sq ft)
-Number of bedrooms (BHK)
-Bathrooms
-Target: Price
+-Location
+-Total area (sq ft)
+-Number of bedrooms (BHK)
+-Bathrooms
+-Target: Price
 
 #**⚙️How to Run**
 
@@ -53,18 +54,18 @@ Then open in browser:
 
 Used regression-based Machine Learning model
 Data preprocessing included:
-Handling missing values
-Feature engineering
-Outlier removal
+-Handling missing values
+-Feature engineering
+-Outlier removal
 
 #**🔥 Results**
 
-Achieved good prediction accuracy on Bengaluru dataset
-Model performs well for common residential scenarios
+-Achieved good prediction accuracy on Bengaluru dataset
+-Model performs well for common residential scenarios
 
 #**🌐 Future Improvements**
 
-Add more datasets for better accuracy
-Deploy on cloud (AWS/Render)
-Improve UI/UX with React
-Add map-based location input
+-Add more datasets for better accuracy
+-Deploy on cloud (AWS/Render)
+-Improve UI/UX with React
+-Add map-based location input
