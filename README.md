@@ -68,40 +68,48 @@ The model is trained on a Bengaluru housing dataset with features such as:
 
 ## ⚙️ How to Run Locally  
 
-### 1️ Install Dependencies  
+### 1️⃣ Install Dependencies  
 ```bash
 pip install flask pandas numpy scikit-learn
+```
 
-### 2 Run the application
+### 2️⃣ Run the Application  
 ```bash
 python app.py
+```
 
-### 3 Open in browser
+### 3️⃣ Open in Browser  
 👉 http://127.0.0.1:5000/
-
 
 ---
 
-```md
 ## ☁️ Deployment (AWS)  
 - 🚀 Deployed on AWS (EC2)  
 - 🌐 Accessible via public IP  
 - ⚙️ Flask backend serving ML model  
-- 🔗 Handles real-time prediction requests
+- 🔗 Handles real-time prediction requests  
+
+---
 
 ## 📈 Model Details  
 - 📌 Regression-based Machine Learning model  
 - 🧹 Data preprocessing:
   - Handling missing values  
   - Feature engineering  
-  - Outlier removal
+  - Outlier removal  
+
+---
 
 ## 🔥 Results  
 - ✅ Achieved strong prediction performance on Bengaluru dataset  
-- 📊 Provides reliable estimates for residential properties
+- 📊 Provides reliable estimates for residential properties  
+
+---
 
 ## 🚀 Future Improvements  
 - 🌍 Add more datasets for better accuracy  
 - ⚡ Enhance UI using React  
 - 🗺️ Integrate map-based location input  
 - ☁️ Use domain + CI/CD for better deployment  
+
+
