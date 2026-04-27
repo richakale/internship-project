@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('real estate project 11.html')  # assumes the HTML file is named index.html
+    return render_template('index.html')  # assumes the HTML file is named index.html
 
 @app.route('/predict', methods=['POST'])
 def calculate_total_price():
