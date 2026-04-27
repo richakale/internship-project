@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bangalore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="img"></div>
+    <form class="form">
+        <h1>Dream house in Bangalore</h1>
+        <p>area(Square Feet)</p>
+        <input class="area" type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+        
+        <h2>BHK</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+            <label for="radio-bhk-1">1</label>
+            <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+            <label for="radio-bhk-2">2</label>
+            <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+            <label for="radio-bhk-3">3</label>
+            <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+            <label for="radio-bhk-4">4</label>
+            <input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+            <label for="radio-bhk-5">5</label>
+        </div>
+
+        <label for="location">Select Location:</label>
+        <select id="location">
+            <option value="7000">Whitefield</option>
+            <option value="8000">Koramangala</option>
+            <option value="6000">Electronic City</option>
+            <option value="5000">Yelahanka</option>
+            <option value="3000">Others</option>
+        </select>
+
+        <label for="amenities">Select Amenities:</label>
+        <input type="checkbox" id="parking" value="1000"> Parking<br>
+        <input type="checkbox" id="gym" value="7500"> Gym<br>
+        <input type="checkbox" id="pool" value="5000"> Swimming Pool<br>
+        
+        <button type="button" onclick="calculatePrice()">Calculate Price</button>
+        <p id="result"></p>
+    </form>
+    
+    <script>
+        function calculatePrice() {
+            var sqft = document.getElementById('uiSqft').value;
+            var bhk = document.querySelector('input[name="uiBHK"]:checked').value;
+            var location = document.getElementById('location').value;
+            var amenities = 0;
+
+            if (document.getElementById('parking').checked) amenities += parseInt(document.getElementById('parking').value);
+            if (document.getElementById('gym').checked) amenities += parseInt(document.getElementById('gym').value);
+            if (document.getElementById('pool').checked) amenities += parseInt(document.getElementById('pool').value);
+
+            var basePrice = (parseInt(sqft) * parseInt(location)) + (parseInt(bhk) * 5000) + amenities;
+            document.getElementById('result').innerHTML = 'Total Price: ₹' + basePrice;
+        }
+    </script>
+</body>
+</html>
